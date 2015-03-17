@@ -5,7 +5,6 @@
 <script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
     <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
-    <script src="https://akita-ken.github.io/feedback-fire/angulartics.js"></script>
 
     
 <!-- Anagular-char data -->
@@ -35,11 +34,6 @@
 
 <body ng-controller="userController" >    
     <div class="container">
-        
-        <button class="btn btn-lg btn-primary" analytics-on="click" analytics-event="angulartics">
-            Angulartics trigger
-        </button>
-                
         <h3> Counters and Timers and Queues </h3>
         Demonstraton of how to eempliment couters, timers, and task queues on Firebase. <br><br>
 
@@ -226,7 +220,7 @@
         
 </div> <!-- container -->
 <script>
-  var myApp = angular.module("myApp", ["firebase","chart.js","angulartics","angulartics.google.analytics","angulartics.js"]);
+  var myApp = angular.module("myApp", ["firebase","chart.js"]);
   myApp.controller('userController', ['$scope', '$firebase',
     function($scope, $firebase) {
     $scope.newuser = {};
