@@ -34,6 +34,10 @@
 
 <body ng-controller="userController" >    
     <div class="container">
+        
+        <button class="btn btn-lg btn-primary" analytics-on="click" analytics-event="angulartics">
+            Angulartics trigger
+        </button>
                 
         <h3> Counters and Timers and Queues </h3>
         Demonstraton of how to eempliment couters, timers, and task queues on Firebase. <br><br>
@@ -221,7 +225,7 @@
         
 </div> <!-- container -->
 <script>
-  var myApp = angular.module("myApp", ["firebase","chart.js"]);
+  var myApp = angular.module("myApp", ["firebase","chart.js","angulartics","angulartics.google.analytics"]);
   myApp.controller('userController', ['$scope', '$firebase',
     function($scope, $firebase) {
     $scope.newuser = {};
@@ -453,13 +457,14 @@
   
   <!-- Google Tracking code. Change the UA-XXXXXXX key to be yours -->
   <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  
-    ga('create', 'UA-32403946-2', 'auto');
-    ga('send', 'pageview');
-  </script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-60833551-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </body>
 </html>
